@@ -1,5 +1,7 @@
 package javaStudy;
 
+import java.io.File;
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -58,7 +60,10 @@ class myThread extends Thread{
 		super(s);
 	}
 	public void run(){
-		WebDriver driver = new FirefoxDriver();
+		File file = new File("");
+		String path = file.getAbsolutePath();
+		System.setProperty("webdriver.chrome.driver", path+"/lib/selenium-java-3.0.0-beta4/chromedriver");
+		WebDriver driver = new ChromeDriver();
 		driver.get("http://dev.xjshift.com:81/dev/login?id="+getName()+"&key=blue");
 		driver.get("http://dev.xjshift.com:81/");
 		driver.manage().window().setSize(new Dimension(400,680));
