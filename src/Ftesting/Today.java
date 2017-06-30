@@ -18,7 +18,7 @@ enum WeekDay{
 	}
 }
 
-class Today{
+public class Today{
 	public static void main(String args[]){
 		WeekDay today = WeekDay.Thursday;
 		today.dayname();

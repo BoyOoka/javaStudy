@@ -14,7 +14,7 @@ class S{
 	}
 }
 
-class TestS{
+public class TestS{
 	public static void main(String[] args){
 		S a = new S(10);
 //		a.x = 5;
