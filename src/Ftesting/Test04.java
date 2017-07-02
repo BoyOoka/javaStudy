@@ -1,6 +1,6 @@
 package Ftesting;
 
-class Test04{
+public class Test04{
 	public static void main(String args[]){
 		byte x1=10;
 		short x2=x1;

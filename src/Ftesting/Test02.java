@@ -1,6 +1,6 @@
 package Ftesting;
 
-class Test02{
+public class Test02{
 	public static void main(String[] args){
 		int x=10;
 		System.out.println(x);
@@ -12,11 +12,11 @@ class Test02{
 		System.out.println(y1);
 		System.out.println(y2);
 		System.out.println(y3);
-		float m1=3.14f,m2=-2e-3f,m3=3.1415926f;
+		float m1=3.14f,m2=-2e-3f,m3=3.141592679f;
 		System.out.println(m1);
 		System.out.println(m2);
 		System.out.println(m3);
-		double m4=3.1415926;
+		double m4=3.141592679d;
 		System.out.println(m4);
 		char n1=97,n2='\141',n3='\u9646';
 		System.out.println(n1);
