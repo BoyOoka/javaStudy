@@ -22,6 +22,7 @@ public class calendar {
 		System.out.println(gc.get(Calendar.DAY_OF_MONTH));
 		System.out.println(gc.get(Calendar.DAY_OF_WEEK));
 		System.out.println(gc.get(Calendar.YEAR));
+		System.out.println(gc.get(Calendar.HOUR_OF_DAY));
 	}
 
 }
