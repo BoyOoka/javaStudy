@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<depts>
+	    <dept deptid="1">
+	        <deptname>行政部</deptname>
+	        <deptnum>20</deptnum>
+	        <deptdesc>行政相关</deptdesc>
+	    </dept>
+	    <name nameid="2">
+	        <boy>小明</boy>
+	        <girl>小花</girl>
+	    </name>
+	</depts>
