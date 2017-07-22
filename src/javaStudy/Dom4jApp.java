@@ -18,7 +18,10 @@ public class Dom4jApp {
 		char j ='a';
 		SAXReader parser = new SAXReader();
 		try{
-			Document doc = parser.read(new File("/Users/gaya/git/javaStudy/src/javaStudy/dept.xml"));
+			File f =new File("");
+			String path = f.getAbsolutePath();
+			System.out.println(path);
+			Document doc = parser.read(new File(path+"/src/javaStudy/dept.xml"));
 			Element root = doc.getRootElement();
 			String rootName = root.getName();
 			System.out.println(rootName+"0");
