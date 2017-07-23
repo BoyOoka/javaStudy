@@ -5,8 +5,9 @@
 	        <deptnum>20</deptnum>
 	        <deptdesc>行政相关</deptdesc>
 	    </dept>
-	    <name nameid="2">
-	        <boy>小明</boy>
-	        <girl>小花</girl>
-	    </name>
+	    <dept depid="2">
+	        <deptname>人事部</deptname>
+	        <deptnum>3</deptnum>
+	        <deptdesc>人事相关</deptdesc>
+	    </dept>
 	</depts>
