@@ -8,8 +8,17 @@ import java.awt.Toolkit;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 
 public class 创建一个框架 {
@@ -48,10 +57,51 @@ public class 创建一个框架 {
 		jc1.setSelected(true);
 		//创建一个toggleButton
 		JToggleButton jt1 = new JToggleButton("按下");
+		//创建文本输入域对象
+		JTextField jt = new JTextField(10);
+		//创建密码输入域
+		JPasswordField jp = new JPasswordField(10);
+		//创建文本区对象
+		JTextArea ja = new JTextArea(5,5);
+		ja.setText("什么鬼");
+		ja.setColumns(10);
+		ja.setRows(5);
+		ja.setLineWrap(true);
+		ja.setWrapStyleWord(true);
+		ja.setTabSize(20);
+		//创建标签对象
+		JLabel jl = new JLabel("学生管理",JLabel.CENTER);
+		//创建字符串对象
+		String[] a = {"小明","小花","小小花","小小明"};
+		JComboBox<Object> jc = new JComboBox<Object>(a);
+		//创建菜单栏条对象menubar1
+		JMenuBar menubar1 = new JMenuBar();
+		jf.setJMenuBar(menubar1);//设置窗口对象jf的菜单栏
+		//创建4个菜单对象
+		JMenu menu1 = new JMenu("文件");
+		JMenu menu2 = new JMenu("编辑");
+		JMenu menu3 = new JMenu("视图");
+		JMenu menu4 = new JMenu("帮助");
+		//将菜单栏添加到工具栏对象
+		menubar1.add(menu1);
+		menubar1.add(menu2);
+		menubar1.add(menu3);
+		menubar1.add(menu4);
+		//创建4个菜单项对象
+		JMenuItem item1 = new JMenuItem("打开");
+		JMenuItem item2 = new JMenuItem("保存");
+		JMenuItem item3 = new JMenuItem("打印");
+		JMenuItem item4 = new JMenuItem("退出");
+		//添加菜单项到菜单栏
+		menu1.add(item1);
+		menu1.add(item2);
+		menu1.addSeparator();//添加间隔条
+		menu1.add(item3);
+		menu1.addSeparator();
+		menu1.add(item4);
 		//将按钮添加到面板p
 		Panel p = new Panel();
-		p.add(b1);
-		p.add(b2);
+		Panel p1 = new Panel();
 		p.add(jr1);
 		p.add(jr2);
 		p.add(jr3);
@@ -59,9 +109,18 @@ public class 创建一个框架 {
 		p.add(jc2);
 		p.add(jc3);
 		p.add(jt1);
+		p.add(jt);
+		p.add(jp);
+		p.add(ja);
+		p.add(jl);
+		p.add(jc);
+		p1.add(b1);
+		p1.add(b2);
 		jf.add(p,BorderLayout.CENTER);//将对象添加到窗口
+		jf.add(p1, BorderLayout.PAGE_END);
 //		jf.show();
 		jf.setVisible(true);
+//		JOptionPane.showConfirmDialog(null, "这是错误信息！","这是错误信息",JOptionPane.YES_NO_CANCEL_OPTION);
 	}
 
 }
