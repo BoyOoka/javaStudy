@@ -12,15 +12,10 @@ import javax.swing.JApplet;
 public class audio extends Applet {
 	AudioClip voice;
 	public void init(){
-		URL u = null;
-		u = this.getClass().getClassLoader().getResource("/Users/gaya/Downloads/song.wav");
-		//为对象voice赋值，实现播放音乐
-		voice = getAudioClip(getCodeBase(),"song.wav");
-//		voice = JApplet.newAudioClip(u);
-		File f = new File("");
-		System.out.println(f.getAbsolutePath());
 	}
 	public void start(){
+		//为对象voice赋值，实现播放音乐
+		voice = getAudioClip(getCodeBase(),"ding.wav");
 		System.out.println("播放");
 		voice.loop();
 	}
