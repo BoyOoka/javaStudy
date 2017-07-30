@@ -24,15 +24,15 @@ public class studentlog {
 
 }
 class login extends JPanel{
-	static final int WIDTH = 500;
-	static final int HEIGHT = 300;
+	static final int WIDTH = 400;
+	static final int HEIGHT = 200;
 	JFrame loginframe;
 	//创建按照网格组布局方式排列的组件放发
 	public void add(Component c,GridBagConstraints constraints,int x,int y,int w,int h){
 		constraints.gridx = x;
 		constraints.gridy = y;
 		constraints.gridwidth = w;
-		constraints.gridwidth = h;
+		constraints.gridheight = h;
 		add(c,constraints);
 	}
 	login(){
@@ -43,6 +43,7 @@ class login extends JPanel{
 		GridBagLayout lay = new GridBagLayout();
 		setLayout(lay);
 		//添加当前对象到登录界面
+		JButton ok2 = new JButton("登录");
 		loginframe.add(this, BorderLayout.WEST);
 		loginframe.setSize(WIDTH, HEIGHT);
 		//实现居中功能
@@ -58,25 +59,26 @@ class login extends JPanel{
 		//创建标签对象title
 		JLabel title = new JLabel("信 息 登 录 窗 口");
 		JLabel name = new JLabel("用户名：");
-		JLabel password = new JLabel("密 码：");
+		JLabel password = new JLabel("密  码：");
 		//创建用户名和密码输入文本框
 		final JTextField nameinput = new JTextField(15); 
-		final JPasswordField passwordinput = new JPasswordField(10);
+		final JPasswordField passwordinput = new JPasswordField(15);
+		nameinput.setText("gaya");
+		passwordinput.setText("123456");
 		//创建网格组布局对象constraints
 		GridBagConstraints constraints = new GridBagConstraints();
 		//设置constraints属性
-		constraints.fill = GridBagConstraints.NONE;
-		constraints.anchor = GridBagConstraints.EAST;
-		constraints.weightx = 3;
-		constraints.weighty = 4;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.weightx = 1;
+		constraints.weighty = 1;
 		//使用网格组布局添加控件
-		add(title,constraints,0,0,4,1);
-		add(name,constraints,0,1,1,1);
-		add(password,constraints,0,2,1,1);
-		add(nameinput,constraints,2,1,1,1);
-		add(passwordinput,constraints,2,2,1,1);
-		add(ok,constraints,0,3,1,1);
-		add(cancel,constraints,2,3,1,1);
+		add(title,constraints,2,0,4,1);
+		add(name,constraints,2,1,2,1);
+		add(password,constraints,2,2,2,1);
+		add(nameinput,constraints,4,1,2,1);
+		add(passwordinput,constraints,4,2,2,1);
+		add(ok,constraints,3,3,2,1);
+		add(cancel,constraints,4,3,2,1);
 		loginframe.setResizable(false);
 		loginframe.setVisible(true);
 		//为ok按钮注册事件
@@ -94,7 +96,7 @@ class login extends JPanel{
 				boolean z = (x&&y);
 				if(z==true){
 					loginframe.dispose();
-//					mainframe main = new mainframe();
+					mainframe main = new mainframe();
 					System.out.println("登录成功");
 				}else if(z==false){
 					nameinput.setText("");

@@ -12,7 +12,7 @@ public class mysqlConnect {
 		int i = 0;
 		String driver = "com.mysql.jdbc.Driver";
         //URL指向要访问的数据库名mydata
-		String url = "jdbc:mysql://localhost:3306/mysql?useSSL=true";
+		String url = "jdbc:mysql://localhost:3306/study?useSSL=true";
         //MySQL配置时的用户名
         String user = "root";
         //MySQL配置时的密码
@@ -21,7 +21,7 @@ public class mysqlConnect {
 			Class.forName(driver);//加载JDBC驱动
 			Connection conn = DriverManager.getConnection(url,user,password);
 			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery("select * from user");
+			ResultSet rs = st.executeQuery("select * from studentinfo");
 			while(rs.next()){
 				System.out.print(rs.getString(1)+"\t");
 				System.out.print(rs.getString(2)+"\t");
