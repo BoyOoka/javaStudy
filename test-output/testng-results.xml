@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="81" started-at="2017-08-04T07:59:47Z" finished-at="2017-08-04T07:59:47Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="81" started-at="2017-08-04T07:59:47Z" finished-at="2017-08-04T07:59:47Z">
+      <class name="testNG.testData">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testNG.testData@1b604f19]" name="f" duration-ms="16" started-at="2017-08-04T15:59:47Z" data-provider="dp" finished-at="2017-08-04T15:59:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[小明]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testNG.testData@1b604f19]" name="f" duration-ms="3" started-at="2017-08-04T15:59:47Z" data-provider="dp" finished-at="2017-08-04T15:59:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[小花]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:testNG.testData@1b604f19]" name="f" duration-ms="4" started-at="2017-08-04T15:59:47Z" data-provider="dp" finished-at="2017-08-04T15:59:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[小东]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- testNG.testData -->
+      <class name="testNG.testParameter">
+        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:testNG.testParameter@457e2f02]" name="f1" duration-ms="2" started-at="2017-08-04T15:59:47Z" finished-at="2017-08-04T15:59:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_user1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f1 -->
+        <test-method status="PASS" signature="f2(java.lang.String, java.lang.String)[pri:0, instance:testNG.testParameter@457e2f02]" name="f2" duration-ms="3" started-at="2017-08-04T15:59:47Z" finished-at="2017-08-04T15:59:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_user2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
+      </class> <!-- testNG.testParameter -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

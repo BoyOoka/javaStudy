@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="false">
+  <test name="Test">
+      <parameter name="sUsername1" value="test_user1" />
+      <parameter name="sPassword1" value="12345" />
+      <parameter name="sUsername2" value="test_user2" />
+      <parameter name="sPassword2" value="123456" />
+      <parameter name="sUsername" value="test_user3" />
+      <parameter name="sPassword" value="1234567" />
+      <parameter name="sUsername" value="test_user4" />
+      <parameter name="sPassword" value="12345678" />
+    <classes>
+      <class name="testNG.testData"/>
+      <class name="testNG.testParameter"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
