@@ -12,6 +12,7 @@ import java.util.Map;
 
 import com.google.gson.JsonObject;
 
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 public class HttpRequest {
@@ -141,7 +142,7 @@ public class HttpRequest {
 //        System.out.println(s);
         
         //发送 POST 请求
-//        String sr=HttpRequest.sendPost("http://123.206.84.43:8080/api/admin/insertShopOneClass");
+        String sr=HttpRequest.sendPost("http://123.206.84.43:8080/api/admin/insertShopOneClass");
 //        System.out.println(sr);
         HttpRequest.sendPost("http://123.206.84.43:8080/api/admin/insetShopTweClass?shopClassId=11");
     }
