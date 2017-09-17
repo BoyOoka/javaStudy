@@ -7,10 +7,10 @@ public class classifyAdd {
 	public static void main(String[] args) {
 		String urlF = "http://123.206.84.43:8080/api/admin/insertShopOneClass";
 		String urlS = "http://123.206.84.43:8080/api/admin/insetShopTweClass?shopClassId=";
+		String urlG = "http://123.206.84.43/api/admin/insetShop";
 		String name1 = "testPL";
 		String name2 = "test2";
 		String urlImg = "http://sharebox-1253910309.file.myqcloud.com/photo/u%3D2734426178%2C1534917874%26fm%3D11%26gp%3D0.jpg";
-		Random r = new Random();
 		postRequest p = new postRequest();
 		mysqlConect mysql = new mysqlConect();
 		for(int i=0;i<mysql.list1.size();i++){

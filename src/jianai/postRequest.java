@@ -107,4 +107,63 @@ public class postRequest {
             }
         }
 	}
+	//物品上架
+	public void postGoods(String urlG,String shopName,String addressName,int getIntegral,int isRent,int isBuy,int money,String shopDescription,int integralNum,int deposit,String shopImages,int shopClassId){
+		BufferedReader in = null;
+		String result = "";
+		try {
+			URL urlS1 = new URL(urlG);
+			URLConnection conn = urlS1.openConnection();
+			
+			conn.setRequestProperty("accept", "*/*");
+            conn.setRequestProperty("connection", "Keep-Alive");
+            conn.setRequestProperty("user-agent",
+                    "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+            conn.setRequestProperty("Content-Type","application/json;charset=UTF-8");
+            conn.setUseCaches(false);
+            // 发送POST请求必须设置如下两行
+            conn.setDoOutput(true);
+            conn.setDoInput(true);
+            
+            DataOutputStream out2 = new DataOutputStream(
+                    conn.getOutputStream());
+            JSONObject obj = new JSONObject();
+            obj.element("shopName", shopName);
+            obj.element("addressName", addressName);
+            obj.element("getIntegral", getIntegral);
+            obj.element("isRent", isRent);
+            obj.element("isBuy", isBuy);
+            obj.element("money", money);
+            obj.element("shopDescription", shopDescription);
+            obj.element("integralNum", integralNum);
+            obj.element("deposit", deposit);
+            obj.element("shopImages", shopImages);
+            obj.element("shopClassId", shopClassId);
+            out2.write(obj.toString().getBytes("UTF-8"));
+            out2.flush();
+            out2.close();
+            in = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream(),"utf-8"));
+            
+            String line;
+            while ((line = in.readLine()) != null) {
+                result += line;
+            }
+            System.out.println("添加商品"+shopName+"响应");
+            System.out.println(result.toString());
+		} catch (Exception e) {
+			System.out.println("添加商品");
+			e.printStackTrace();
+		}
+		finally {
+            try {
+                if (in != null) {
+                    in.close();
+                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+	}
+
 }
