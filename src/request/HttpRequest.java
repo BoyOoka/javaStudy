@@ -1,6 +1,7 @@
 package request;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -8,6 +9,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 import java.util.Map;
+
+import com.google.gson.JsonObject;
+
+import net.sf.json.JSONObject;
 
 public class HttpRequest {
     /**
@@ -73,7 +78,7 @@ public class HttpRequest {
      *            请求参数，请求参数应该是 name1=value1&name2=value2 的形式。
      * @return 所代表远程资源的响应结果
      */
-    public static String sendPost(String url, String param) {
+    public static String sendPost(String url) {
         PrintWriter out = null;
         BufferedReader in = null;
         String result = "";
@@ -86,15 +91,23 @@ public class HttpRequest {
             conn.setRequestProperty("connection", "Keep-Alive");
             conn.setRequestProperty("user-agent",
                     "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setUseCaches(false);//不要缓存
+            
             // 发送POST请求必须设置如下两行
             conn.setDoOutput(true);
             conn.setDoInput(true);
             // 获取URLConnection对象对应的输出流
-            out = new PrintWriter(conn.getOutputStream());
+//          out = new PrintWriter(conn.getOutputStream());
+            DataOutputStream out1 = new DataOutputStream(
+                    conn.getOutputStream());
+            JSONObject obj = new JSONObject();
+            obj.element("name", "test");
+            obj.element("urlImg", "http://sharebox-1253910309.file.myqcloud.com/photo/u%3D2734426178%2C1534917874%26fm%3D11%26gp%3D0.jpg");
             // 发送请求参数
-            out.print(param);
+            out1.writeBytes(obj.toString());
             // flush输出流的缓冲
-            out.flush();
+            out1.flush();
             // 定义BufferedReader输入流来读取URL的响应
             in = new BufferedReader(
                     new InputStreamReader(conn.getInputStream()));
@@ -124,11 +137,12 @@ public class HttpRequest {
     }    
     public static void main(String[] args) {
         //发送 GET 请求
-        String s=HttpRequest.sendGet("http://www.duokan.com/", "key=123&v=456");
-        System.out.println(s);
+//        String s=HttpRequest.sendGet("http://www.duokan.com/", "key=123&v=456");
+//        System.out.println(s);
         
         //发送 POST 请求
-        String sr=HttpRequest.sendPost("http://www.rqw66.com/home/JsApi/index", "");
-        System.out.println(sr);
+//        String sr=HttpRequest.sendPost("http://123.206.84.43:8080/api/admin/insertShopOneClass");
+//        System.out.println(sr);
+        HttpRequest.sendPost("http://123.206.84.43:8080/api/admin/insetShopTweClass?shopClassId=11");
     }
 }
