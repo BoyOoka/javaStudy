@@ -34,7 +34,8 @@ public class 删除文件 {
                 }
             }
         }
-        // 目录此时为空，可以删除
+        
+        // 目录为空，可以删除
         return dir.delete();
     }
     /**

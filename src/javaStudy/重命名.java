@@ -3,6 +3,7 @@ package javaStudy;
 import java.io.File;
 
 public class 重命名 {
+	
 /** *//**文件重命名 
  * @param path 文件目录 
  * @param oldname  原来的文件名 
