@@ -19,7 +19,7 @@ public class mysqlConnect {
 		ResultSet rs = null;
 		try {
 			Class.forName(driver);// 加载JDBC驱动
-			Connection conn = DriverManager.getConnection(url);
+			Connection conn = DriverManager.getConnection(url,user,password);
 			Statement st = conn.createStatement();
 			rs = st.executeQuery("select * from studentinfo");
 			while (rs.next()) {
