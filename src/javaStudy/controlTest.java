@@ -65,7 +65,7 @@ public class controlTest {
 		System.out.println();
 	}
 	public static void cas(){
-		int i = 10;
+		int i = 10 ;
 		switch(i){
 		case 1 : System.out.println("一月份"); break;
 		case 2 : System.out.println("二月份"); break;
