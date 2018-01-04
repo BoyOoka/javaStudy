@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
- 	 	<!DOCTYPE message[
- 	 					<!ELEMENT message (#PCDATA)>
- 	 					]> <!-- 内部定义DTD文件 -->
-	    	<message>
-	    	    这是什么👻
-	   		</message>
-	    
