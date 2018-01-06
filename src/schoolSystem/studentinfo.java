@@ -44,7 +44,7 @@ public class studentinfo extends JPanel{
 		constraints.gridheight = h;
 		add(c,constraints);
 	}
-	public studentinfo(String str,String sql,String major1){
+	public studentinfo(String str,String sql,final String major1){
 		studentinforframe = new JFrame();
 		studentinforframe.setTitle(str);
 		//设置关闭方法
