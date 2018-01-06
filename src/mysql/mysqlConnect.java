@@ -15,26 +15,28 @@ public class mysqlConnect {
 		// MySQL配置时的用户名
 		String user = "root";
 		// MySQL配置时的密码
-		String password = "8623117";
+		String password = "8623116";
 		ResultSet rs = null;
 		try {
 			Class.forName(driver);// 加载JDBC驱动
 			Connection conn = DriverManager.getConnection(url,user,password);
 			Statement st = conn.createStatement();
 			rs = st.executeQuery("select * from studentinfo");
+		/*
 			while (rs.next()) {
-				// System.out.print(rs.getString(1)+"\t");
-				// System.out.print(rs.getString(2)+"\t");
-				// System.out.print(rs.getString(3)+"\n");
-			}
+				 System.out.print(rs.getString(1)+"\t");
+				 System.out.print(rs.getString(2)+"\t");
+				 System.out.print(rs.getString(3)+"\n");
+			}*/
+			rs.next();
+			System.out.println(rs.getString(1));
 			rs.close();
 			st.close();
 			conn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(rs);
-		System.out.println(2);
+		
 	}
 
 }
