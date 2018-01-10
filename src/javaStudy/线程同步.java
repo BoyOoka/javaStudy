@@ -22,6 +22,7 @@ class computex extends Thread{
 		System.out.println(Thread.currentThread().getName()+":"+i);
 		i--;
 	}
+	@Override
 	public void run(){
 		while(i>0){
 			synchronized(obj){//同步化块
@@ -45,7 +46,8 @@ class computex1 extends Thread{
 		System.out.println(Thread.currentThread().getName()+":"+i);
 		i--;
 	}
-	 public void run(){
+	 @Override
+	public void run(){
 		while(i>0){
 			print();
 			try{

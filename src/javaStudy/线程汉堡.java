@@ -28,6 +28,7 @@ class hmaker extends Thread{
 				}
 			}
 		}
+		@Override
 		public void run(){
 //			汉堡用完之前，不断产生汉堡
 			while(ham.production<ham.totalmaterial){
@@ -57,6 +58,7 @@ class hassistant extends Thread{
 		ham.sales++;
 		System.out.println("营业员总共卖了："+ham.sales+"个");
 	}
+	@Override
 	public void run(){
 		while(ham.sales<ham.production){
 			try{

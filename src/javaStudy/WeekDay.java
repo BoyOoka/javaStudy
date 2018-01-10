@@ -22,6 +22,7 @@ public class WeekDay{
 		else if(this == FN){return SAT;}
 		else return SUN;
 	}
+	@Override
 	public String toString(){
 		if(this == SUN){return "星期日";}
 		else if(this == MON){return "星期一";}

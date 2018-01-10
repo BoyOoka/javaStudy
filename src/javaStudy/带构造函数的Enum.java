@@ -3,7 +3,7 @@ package javaStudy;
 public class 带构造函数的Enum {
 	public static void main(String[] args){
 	WeekDay3 today = WeekDay3.SUN;
-	System.out.println(today.FRI);
+	System.out.println(WeekDay3.FRI);
 	}
 }
 enum WeekDay3{

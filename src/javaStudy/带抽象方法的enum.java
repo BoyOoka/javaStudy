@@ -17,6 +17,7 @@ enum WeekDay4{
 		}
 	},
 	MON{
+			@Override
 			public WeekDay4 nextDay(){
 				return TUE;
 			}

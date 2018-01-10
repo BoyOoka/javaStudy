@@ -11,7 +11,8 @@ public class ThreadDemo2 {
     }
 }
 class Demo2 implements Runnable{
-    public void run(){
+    @Override
+	public void run(){
         for(int x=0;x<60;x++){
             System.out.println(Thread.currentThread().getName()+x);
         }

@@ -39,6 +39,7 @@ class maker extends Thread{
 		}
 	}
 	
+	@Override
 	public void run(){
 		make();
 	}
@@ -71,6 +72,7 @@ class clerk extends Thread{
 		}
 		
 	}
+	@Override
 	public void run(){
 		sales();
 	}

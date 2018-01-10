@@ -6,7 +6,6 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class threadOpen  {
 	public static void main(String[] args){
@@ -59,6 +58,7 @@ class myThread extends Thread{
 	myThread(String s){
 		super(s);
 	}
+	@Override
 	public void run(){
 		File file = new File("");
 		String path = file.getAbsolutePath();

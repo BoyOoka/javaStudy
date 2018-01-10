@@ -1,7 +1,5 @@
 package javaStudy;
 
-import javax.print.DocFlavor.INPUT_STREAM;
-
 public class controlTest {
 	public static void main(String[] args){
 		int Chinese = 90;

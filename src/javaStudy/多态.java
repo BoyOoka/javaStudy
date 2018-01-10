@@ -50,6 +50,7 @@ class studentclass{
 	public double getachi(){
 		return achievement;
 	}
+	@Override
 	public String toString(){
 		String info = "学生姓名:"+name
 				+ " "
@@ -67,6 +68,7 @@ class studentmen extends studentclass{
 	public void set(String a){
 		this.a = a;
 	}
+	@Override
 	public String toString(){
 		String info = "学生姓名:"+name
 				+ " "

@@ -13,10 +13,12 @@ public class DeptHandler extends DefaultHandler{
 	public DeptHandler(){
 		
 	}
+	@Override
 	public void startDocument() throws SAXException{
 		System.out.println("开始解析XML");
 	}
 	//拦截是否解析xml文档中某个元素的开始标记
+	@Override
 	public void startElement(String uri,String localName,String qName,Attributes attributes) throws SAXException{
 		System.out.println("uri:"+uri);
 		System.out.println("localName:"+localName);
@@ -37,11 +39,13 @@ public class DeptHandler extends DefaultHandler{
 		
 	}
 	//拦截是否解析XML文档中某个元素的结束标记
+	@Override
 	public void endElement(String uri,String localName,String qName)throws SAXException{
 		System.out.println("uri:"+uri);
 		System.out.println("localName:"+localName);
 		System.out.println("qName:"+qName);
 	}
+	@Override
 	public void endDocument() throws SAXException{
 		System.out.println("结束解析XML文档");
 	}
@@ -67,6 +71,7 @@ class Dept{
 	public Dept(){
 		
 	}
+	@Override
 	public String toString(){
 		return this.deptid+"---"+this.deptname+"---"+this.deptnum+"---"+this.deptdesc+"---";
 	}

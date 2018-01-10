@@ -68,6 +68,7 @@ class flowers implements flower{
 		public String getCity(){
 			return City;
 		}
+		@Override
 		String getinfo(){
 			String info = super.getinfo()+" 花的国家："+Country+" 花的城市："+City;
 			return info;

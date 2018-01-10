@@ -4,6 +4,7 @@ public class 接口 implements school{
 	String schoolname;
 	String classname;
 	String name, sex;
+	@Override
 	public String getschoolname(){
 		return schoolname;
 	}
@@ -26,6 +27,7 @@ public class 接口 implements school{
 		this.name = name;
 		this.sex =sex;
 	}
+	@Override
 	public String toString(){
 		String info = "校名:"
 				+ getschoolname()

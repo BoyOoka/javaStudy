@@ -39,6 +39,7 @@ class Studentf{
 	public Studentf(int stuNum){
 		this.stuNum = stuNum;
 	}
+	@Override
 	public String toString(){
 		return " "+this.stuNum;
 	}

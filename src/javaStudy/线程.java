@@ -15,7 +15,7 @@ public class 线程 {
 		t.start();
 		t1.start();
 		i1.start();
-		t3.interrupted();//打断线程无效
+		Thread.interrupted();//打断线程无效
 		i1.interrupt();//打断线程3
 	}
 }
@@ -24,6 +24,7 @@ class compute extends Thread{
 		super(s);
 	}
 	int i = 0;
+	@Override
 	public void run(){//实现run方法
 		for(;i<10;i++){
 			System.out.println(getName()+" "+i);
@@ -32,6 +33,7 @@ class compute extends Thread{
 }
 class compute1 extends Thread{
 	int i = 0;
+	@Override
 	public void run(){
 		for(;i<10;i++){
 			System.out.println(Thread.currentThread().getName()+i+" ");
@@ -53,6 +55,7 @@ class interrupt implements Runnable{
 	
 }
 class interrupt1 extends Thread{
+	@Override
 	public void run(){
 		System.out.println("busy");
 		try {

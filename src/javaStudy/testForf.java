@@ -8,6 +8,7 @@ public class testForf {
 		this.j = j;
 		return i+j;
 	}
+	@Override
 	public String toString(){
 		return String.valueOf(testForf(i, j));
 	}

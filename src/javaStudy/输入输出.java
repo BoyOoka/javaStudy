@@ -1,8 +1,6 @@
 package javaStudy;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class 输入输出 {
